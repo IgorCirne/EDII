@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 setups = []
 setups_teamscore = []
 setups_filtered = []
-setups_teamscore_filtered = []
+
 
 # Chama a função que cria todos os setups possíveis
 
@@ -25,9 +25,7 @@ for x in range(len(setups)):
 plt.hist(setups_teamscore)
 plt.show()
 
-#Ordenando a array de setups em ordem decrescente de acordo com o parâmetro teamscore
 
-setups.sort(key=lambda temp: temp.teamscore, reverse=True)
 
 #Filtrando so 50 melhores valores numa nova array
 
