@@ -48,6 +48,19 @@ class Gbox:
         self.pit_time = pit_time
         self.teamscore = (self.speed + self.cornering + self.power_unit + self.reliability + (self.pit_time) / 0.02)
 
+class Bottle:
+    def __init__(self, Speed, Cornering, Power_Unit, Reliability, Pit_Stop, Overtaking, Defending, Race_start,
+                 tyre_management):
+        self.speed = Speed
+        self.cornering = Cornering
+        self.power_unit = Power_Unit
+        self.reliability = Reliability
+        self.pit_stop = Pit_Stop
+        self.overtaking = Overtaking
+        self.defending = Defending
+        self.race_start = Race_start
+        self.tyre_management = tyre_management
+
 class Setup:
     def __init__(self,Brake,Engine,Suspension,Fwing,Bwing,Gbox):
         self.Brake = Brake.teamscore

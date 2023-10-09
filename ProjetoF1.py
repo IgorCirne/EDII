@@ -1,5 +1,6 @@
 import Classes
 import Parts
+import Functions
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -10,17 +11,11 @@ setups_teamscore = []
 setups_filtered = []
 setups_teamscore_filtered = []
 
-# Codigo para criar cada setup
+# Chama a função que cria todos os setups possíveis
 
-for a in range(8):
-    for b in range(8):
-        for c in range(8):
-            for d in range(8):
-                for e in range(8):
-                    for f in range(8):
-                        temp_setup = Classes.Setup(Parts.Brakes[a], Parts.Gboxes[b], Parts.Bwings[c], Parts.Fwings[d],
-                                                   Parts.Suspensions[e], Parts.Engines[f])
-                        setups.append(temp_setup)
+Functions.Create_Setups(setups)
+
+# Alocando todos teamscores de um setup em outra array para plotar o Histograma
 
 for x in range(len(setups)):
     setups_teamscore.append(setups[x].teamscore)
@@ -36,8 +31,10 @@ setups.sort(key=lambda temp: temp.teamscore, reverse=True)
 
 #Filtrando so 50 melhores valores numa nova array
 
-for i in range(50):
-    setups_filtered.append(setups[i])
-    print(setups_filtered[i].teamscore)
+Functions.Top_50(setups, setups_filtered)
 
 print(len(setups_filtered))
+
+
+
+

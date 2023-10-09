@@ -113,3 +113,53 @@ Engine_teamscore = [Cloudroar.teamscore,Avalanche.teamscore,The_Rover.teamscore,
 #Array com cada Engine
 
 Engines = [Cloudroar, Avalanche, The_Rover, Twinburst, Enigma, Nova, Brute_Force, Starter_Engine]
+
+#Aqui está a lista de garrafinhas
+
+Tsar =          Classes.Bottle(0,15,0,0,0,0,10,0,25)
+Frost =         Classes.Bottle(0,0,0,10,0,0,0,15,25)
+Tulip =         Classes.Bottle(0,0,0,20,20,0,10,0,0)
+Dragon =        Classes.Bottle(0,0,0,15,0,20,0,0,15)
+Kawaii =        Classes.Bottle(0,0,0,0,15,0,0,15,20)
+Pretzel =       Classes.Bottle(0,0,0,15,10,0,0,0,25)
+Vice =          Classes.Bottle(10,0,15,25,0,0,0,0,0)
+Schooner =      Classes.Bottle(0,0,0,25,15,0,10,0,0)
+Djinn =         Classes.Bottle(0,0,15,20,0,0,15,0,0)
+Oud =           Classes.Bottle(0,10,0,0,25,15,0,0,0)
+Eternal_Flame = Classes.Bottle(0,0,0,15,0,25,0,0,10)
+Eagle =         Classes.Bottle(0,0,0,15,0,0,0,15,20)
+Iron_Force =    Classes.Bottle(0,0,20,20,0,0,0,0,10)
+Lumberjack =    Classes.Bottle(0,0,0,25,0,0,15,0,10)
+Cranberry =     Classes.Bottle(0,0,0,10,0,20,20,0,0)
+Butterfly =     Classes.Bottle(0,0,25,0,5,0,0,0,20)
+Tune_in =       Classes.Bottle(10,15,0,0,25,0,0,0,0)
+Self_Control =  Classes.Bottle(0,0,5,5,0,0,0,0,5)
+Warrior =       Classes.Bottle(10,0,0,0,0,5,5,0,0)
+Ballast =       Classes.Bottle(0,10,0,0,10,0,0,5,0)
+Instinct =      Classes.Bottle(0,0,15,5,0,0,0,10,0)
+Downforce =     Classes.Bottle(0,5,0,0,0,0,15,0,15)
+Hex =           Classes.Bottle(15,0,0,0,5,20,0,0,0)
+Eggception =    Classes.Bottle(0,0,10,0,25,0,15,0,0)
+Rooster =       Classes.Bottle(0,0,10,0,0,20,0,20,0)
+Cuppa =         Classes.Bottle(0,20,0,0,0,10,0,20,0)
+Street_Shark =  Classes.Bottle(15,0,0,0,0,10,0,25,0)
+Herald =        Classes.Bottle(0,15,0,0,0,10,0,25,0)
+Prince =        Classes.Bottle(0,20,0,0,0,0,10,20,0)
+Unstoppable =   Classes.Bottle(15,0,10,0,25,0,0,0,0)
+Dead_Fast =     Classes.Bottle(25,0,20,0,0,0,0,0,5)
+Gladiator =     Classes.Bottle(0,0,10,0,0,0,25,15,0)
+Taurus =        Classes.Bottle(20,0,25,0,0,5,0,0,0)
+Merlion =       Classes.Bottle(15,25,0,0,10,0,0,0,0)
+Samba =         Classes.Bottle(5,0,25,0,20,0,0,0,0)
+Caveira =       Classes.Bottle(25,0,10,0,0,15,0,0,0)
+Fogos =         Classes.Bottle(20,0,0,0,0,15,0,15,0)
+Movember =      Classes.Bottle(0,25,0,0,0,0,15,0,10)
+Palmeira =      Classes.Bottle(0,0,0,0,0,0,20,10,20)
+Nazal =         Classes.Bottle(0,0,0,15,0,0,0,20,15)
+Aderencia =     Classes.Bottle(0,25,0,15,0,0,0,10,0)
+Arco_Iris =     Classes.Bottle(20,0,0,0,0,0,25,5,0)
+Eclipse =       Classes.Bottle(25,0,0,0,10,15,0,0,0)
+Rena =          Classes.Bottle(0,10,0,0,20,0,20,0,0)
+
+Bottles = [Tsar, Frost, Tulip, Dragon, Kawaii, Pretzel, Vice, Schooner, Djinn, Oud, Eternal_Flame, Eagle, Iron_Force, Lumberjack, Cranberry, Butterfly, Tune_in, Self_Control, Warrior, Ballast, Instinct, Downforce, Hex, Eggception, Rooster
+           , Cuppa, Street_Shark, Herald, Prince, Unstoppable, Dead_Fast, Gladiator, Taurus, Merlion, Samba, Caveira, Fogos, Movember, Palmeira, Nazal, Aderencia, Arco_Iris, Eclipse, Rena]
