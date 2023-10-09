@@ -57,3 +57,4 @@ class Setup:
         self.Bwing = Bwing.teamscore
         self.Gbox = Gbox.teamscore
         self.teamscore = Brake.teamscore + Engine.teamscore + Suspension.teamscore + Fwing.teamscore + Bwing.teamscore + Gbox.teamscore
+
