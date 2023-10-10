@@ -15,15 +15,16 @@ for x in range(len(setups)):
     setups_teamscore.append(setups[x].teamscore)
 
 Functions.Top_50(setups, setups_filtered)
-options = {'node_color': 'red',
-           'node_size': 200,
-           'width': 3,
-          }
 
-for i in range(len(Parts.Brakes)):
-    G.add_node(Parts.Brakes[i].name)
 
-nx.draw(G, with_labels=True,**options)
+Functions.add_nodes_from_parts(G)
+
+#Criando os nodes dos setups baseados no índice deles
+
+for i in range(len(setups_filtered)):
+    G.add_node(setups_filtered[i].n)
+
+nx.draw(G, with_labels=True)
 plt.show()
 
 

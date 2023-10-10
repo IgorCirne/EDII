@@ -70,12 +70,13 @@ class Bottle:
 
 
 class Setup:
-    def __init__(self,Brake,Engine,Suspension,Fwing,Bwing,Gbox):
+    def __init__(self,Brake,Engine,Suspension,Fwing,Bwing,Gbox, n):
         self.Brake = Brake
         self.Engine = Engine
         self.Suspension = Suspension
         self.Fwing = Fwing
         self.Bwing = Bwing
         self.Gbox = Gbox
+        self.n = n
         self.teamscore = Brake.teamscore + Engine.teamscore + Suspension.teamscore + Fwing.teamscore + Bwing.teamscore + Gbox.teamscore
 
