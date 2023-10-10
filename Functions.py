@@ -1,7 +1,6 @@
 import Classes
 import Parts
 import networkx as nx
-from ProjetoF1 import setups_filtered
 
 
 #Função que cria todos os setups possíveis baseados nas 6 cartas para um carro
@@ -42,3 +41,34 @@ def add_nodes_from_parts(G):
     for i in range(len(Parts.Suspensions)):
         G.add_node(Parts.Suspensions[i].name)
 
+
+def add_edges(G, setups_filtered = []):
+    for i in range(len(Parts.Brakes)):
+        for j in range(len(setups_filtered)):
+            if setups_filtered[j].Brake.name == Parts.Brakes[i].name:
+                G.add_edge(Parts.Brakes[i].name, setups_filtered[j].n)
+
+    for i in range(len(Parts.Gboxes)):
+        for j in range(len(setups_filtered)):
+            if setups_filtered[j].Gbox.name == Parts.Gboxes[i].name:
+                G.add_edge(Parts.Gboxes[i].name, setups_filtered[j].n)
+
+    for i in range(len(Parts.Suspensions)):
+        for j in range(len(setups_filtered)):
+            if setups_filtered[j].Suspension.name == Parts.Suspensions[i].name:
+                G.add_edge(Parts.Suspensions[i].name, setups_filtered[j].n)
+
+    for i in range(len(Parts.Bwings)):
+        for j in range(len(setups_filtered)):
+            if setups_filtered[j].Bwing.name == Parts.Bwings[i].name:
+                G.add_edge(Parts.Bwings[i].name, setups_filtered[j].n)
+
+    for i in range(len(Parts.Fwings)):
+        for j in range(len(setups_filtered)):
+            if setups_filtered[j].Fwing.name == Parts.Fwings[i].name:
+                G.add_edge(Parts.Fwings[i].name, setups_filtered[j].n)
+
+    for i in range(len(Parts.Engines)):
+        for j in range(len(setups_filtered)):
+            if setups_filtered[j].Engine.name == Parts.Engines[i].name:
+                G.add_edge(Parts.Engines[i].name, setups_filtered[j].n)

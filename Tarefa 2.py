@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 setups = []
 setups_teamscore = []
 setups_filtered = []
-G = nx.Graph()
+G = nx.DiGraph()
 
 Functions.Create_Setups(setups)
 
@@ -21,8 +21,7 @@ Functions.add_nodes_from_parts(G)
 
 #Criando os nodes dos setups baseados no índice deles
 
-for i in range(len(setups_filtered)):
-    G.add_node(setups_filtered[i].n)
+Functions.add_edges(G,setups_filtered)
 
 nx.draw(G, with_labels=True)
 plt.show()
