@@ -65,7 +65,7 @@ Trailblazer = Classes.Fwing(21,23,42,20,0.57, 'Trailblazer')
 Zeno = Classes.Fwing(25,23,22,26,0.53, 'Zeno')
 The_Vagabond = Classes.Fwing(31,20,23,21,0.35, 'The Vagabond')
 Feral_Punch = Classes.Fwing(13,15,22,21,0.73, 'Feral Punch')
-The_Scout = Classes.Fwing(13,27,15,14,0.73, 'The_Scout')
+The_Scout = Classes.Fwing(13,27,15,14,0.73, 'The Scout')
 Starter_Fwing = Classes.Fwing(1,1,1,1,1, 'Starter')
 
 #array com o teamscore de cada Fwing
