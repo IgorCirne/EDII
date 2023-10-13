@@ -1,6 +1,6 @@
 import Classes
 import Parts
-import networkx as nx
+
 
 
 
@@ -22,7 +22,7 @@ def Create_Setups(setups=[], t=0):
 # Essa função recebe duas arrays: Uma com todos os setups e uma vazia, ele coloca os top 50 baseados em teamscore na array vazia
 def Top_10(setups=[], filtered_setups=[]):
     setups.sort(key=lambda temp: temp.teamscore, reverse=True)
-    for i in range(10):
+    for i in range(50):
         filtered_setups.append(setups[i])
 
 
@@ -79,61 +79,18 @@ def add_edges(G, setups_filtered=[]):
                 G.add_edge(Parts.Engines[i].name, setups_filtered[j].n)
 
 
-# Função que recebe uma lista de arestas "edges" e adiciona as arestas de acordo com a tarefa 3
 
-def add_edges_bottles(edges=[]):
-    nodes_A = ['Speed', 'Cornering', 'Power Unit', 'Reliability', 'Pit Stop', 'Overtaking', 'Defending', 'Race Start',
-               'Tyre Management']
-    for node_A in nodes_A:
-        if node_A == 'Power Unit':
-            for bottle in Parts.Bottles:
-                if bottle.power_unit != 0:
-                    edges.append(('Power Unit', bottle))
+def add_edges_bottles(G, nodes_A, bottles, node_index=0):
+    if node_index >= len(nodes_A):
+        return  # Caso base: Todos os nós de atributo foram verificados
 
-    for node_A in nodes_A:
-        if node_A == 'Speed':
-            for bottle in Parts.Bottles:
-                if bottle.speed != 0:
-                    edges.append(('Speed', bottle))
+    node_A = nodes_A[node_index]
+    attribute_name = node_A.lower().replace(' ', '_')
 
-    for node_A in nodes_A:
-        if node_A == 'Cornering':
-            for bottle in Parts.Bottles:
-                if bottle.cornering != 0:
-                    edges.append(('Cornering', bottle))
+    for bottle in bottles:
+        attribute_value = getattr(bottle, attribute_name)
+        if attribute_value != 0:
+            G.add_edge(node_A, bottle)
 
-    for node_A in nodes_A:
-        if node_A == 'Reliability':
-            for bottle in Parts.Bottles:
-                if bottle.reliability != 0:
-                    edges.append(('Reliability', bottle))
-
-    for node_A in nodes_A:
-        if node_A == 'Pit Stop':
-            for bottle in Parts.Bottles:
-                if bottle.pit_stop != 0:
-                    edges.append(('Pit Stop', bottle))
-
-    for node_A in nodes_A:
-        if node_A == 'Overtaking':
-            for bottle in Parts.Bottles:
-                if bottle.overtaking != 0:
-                    edges.append(('Overtaking', bottle))
-
-    for node_A in nodes_A:
-        if node_A == 'Defending':
-            for bottle in Parts.Bottles:
-                if bottle.defending != 0:
-                    edges.append(('Defending', bottle))
-
-    for node_A in nodes_A:
-        if node_A == 'Race Start':
-            for bottle in Parts.Bottles:
-                if bottle.race_start != 0:
-                    edges.append(('Race Start', bottle))
-
-    for node_A in nodes_A:
-        if node_A == 'Tyre Management':
-            for bottle in Parts.Bottles:
-                if bottle.tyre_management != 0:
-                    edges.append(('Tyre Management', bottle))
+    # Chame a função recursiva para o próximo nó de atributo
+    add_edges_bottles(G, nodes_A, bottles, node_index + 1)

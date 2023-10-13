@@ -40,7 +40,7 @@ positions = nx.circular_layout(G, scale=20.0)
 # Desenhando o Digrafo
 
 colors = ["lightblue" if n[1]['part'] else "red" for n in G.nodes(data=True)]
-nx.draw(G, pos=positions, with_labels=True, node_size=node_sizes, node_color=colors, font_size=12, font_color='black', font_weight='bold', verticalalignment='bottom')
+nx.draw(G, pos=positions, with_labels=True, node_size=node_sizes, node_color=colors, font_size=12, font_color='black', font_weight='bold')
 plt.show()
 
 
