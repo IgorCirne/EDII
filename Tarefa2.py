@@ -3,8 +3,6 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
-
-
 setups = []
 setups_teamscore = []
 setups_filtered = []

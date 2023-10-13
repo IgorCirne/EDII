@@ -29,7 +29,7 @@ plt.show()
 
 #Filtrando so 50 melhores valores numa nova array
 
-Functions.Top_50(setups, setups_filtered)
+Functions.Top_10(setups, setups_filtered)
 
 print(len(setups_filtered))
 

@@ -7,6 +7,8 @@ class Brake:
         self.pit_time = pit_time
         self.name = name
         self.teamscore = (self.speed + self.cornering + self.power_unit + self.reliability + (self.pit_time) / 0.02)
+
+
 class Engine:
     def __init__(self, speed, cornering, power_unit, reliability, pit_time, name):
         self.speed = speed
@@ -17,6 +19,7 @@ class Engine:
         self.name = name
         self.teamscore = (self.speed + self.cornering + self.power_unit + self.reliability + (self.pit_time) / 0.02)
 
+
 class Suspension:
     def __init__(self, speed, cornering, power_unit, reliability, pit_time, name):
         self.speed = speed
@@ -26,6 +29,8 @@ class Suspension:
         self.pit_time = pit_time
         self.name = name
         self.teamscore = (self.speed + self.cornering + self.power_unit + self.reliability + (self.pit_time) / 0.02)
+
+
 class Fwing:
     def __init__(self, speed, cornering, power_unit, reliability, pit_time, name):
         self.speed = speed
@@ -35,6 +40,8 @@ class Fwing:
         self.pit_time = pit_time
         self.name = name
         self.teamscore = (self.speed + self.cornering + self.power_unit + self.reliability + (self.pit_time) / 0.02)
+
+
 class Bwing:
     def __init__(self, speed, cornering, power_unit, reliability, pit_time, name):
         self.speed = speed
@@ -44,6 +51,8 @@ class Bwing:
         self.pit_time = pit_time
         self.name = name
         self.teamscore = (self.speed + self.cornering + self.power_unit + self.reliability + (self.pit_time) / 0.02)
+
+
 class Gbox:
     def __init__(self, speed, cornering, power_unit, reliability, pit_time, name):
         self.speed = speed
@@ -53,6 +62,7 @@ class Gbox:
         self.pit_time = pit_time
         self.name = name
         self.teamscore = (self.speed + self.cornering + self.power_unit + self.reliability + (self.pit_time) / 0.02)
+
 
 class Bottle:
     def __init__(self, Speed, Cornering, Power_Unit, Reliability, Pit_Stop, Overtaking, Defending, Race_start,
@@ -71,7 +81,7 @@ class Bottle:
 
 
 class Setup:
-    def __init__(self,Brake,Engine,Suspension,Fwing,Bwing,Gbox, n):
+    def __init__(self, Brake, Engine, Suspension, Fwing, Bwing, Gbox, n):
         self.Brake = Brake
         self.Engine = Engine
         self.Suspension = Suspension
@@ -80,4 +90,3 @@ class Setup:
         self.Gbox = Gbox
         self.n = n
         self.teamscore = Brake.teamscore + Engine.teamscore + Suspension.teamscore + Fwing.teamscore + Bwing.teamscore + Gbox.teamscore
-
