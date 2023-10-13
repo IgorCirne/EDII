@@ -23,9 +23,12 @@ Functions.add_nodes_from_parts(G)
 
 
 
-# Criando e adicionando peso nas arestas do grafo
+# Criando ass arestas do grafo
 
 Functions.add_edges(G,setups_filtered)
+
+# Declaração de parâmetros baseados nos out_degrees dos nodes
+
 out_degrees = dict(G.out_degree())
 max_out_degree = max(out_degrees.values())
 node_sizes = [100 + 500 * out_degrees[node] / max_out_degree for node in G.nodes()]

@@ -56,7 +56,7 @@ class Gbox:
 
 class Bottle:
     def __init__(self, Speed, Cornering, Power_Unit, Reliability, Pit_Stop, Overtaking, Defending, Race_start,
-                 tyre_management):
+                 tyre_management, name):
         self.speed = Speed
         self.cornering = Cornering
         self.power_unit = Power_Unit
@@ -66,6 +66,7 @@ class Bottle:
         self.defending = Defending
         self.race_start = Race_start
         self.tyre_management = tyre_management
+        self.name = name
         self.teamscore = Speed + Cornering + Power_Unit + Reliability + Pit_Stop + Overtaking + Defending + Race_start + tyre_management
 
 
