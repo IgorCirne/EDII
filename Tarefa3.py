@@ -9,7 +9,7 @@ G = nx.DiGraph()
 nodes_A = ['Speed', 'Cornering', 'Power Unit', 'Reliability', 'Pit Stop', 'Overtaking', 'Defending', 'Race Start',
            'Tyre Management']
 
-#Definindo os nodes do grafo
+# Definindo os nodes do grafo
 
 G.add_nodes_from(nodes_A, bipartite=0)
 G.add_nodes_from(Parts.Bottles, bipartite=1)
@@ -33,7 +33,7 @@ node_labels_A = {node: node for node in nodes_A}
 node_labels_B = {node: node.name for node in G.nodes() if isinstance(node, Classes.Bottle)}
 node_labels = {**node_labels_A, **node_labels_B}
 
-#Layout do Grafo
+# Layout do Grafo
 
 pos = nx.bipartite_layout(G, nodes=nodes_A, scale=20.0)
 

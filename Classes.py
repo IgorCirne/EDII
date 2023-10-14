@@ -80,6 +80,17 @@ class Bottle:
         self.teamscore = Speed + Cornering + Power_Unit + Reliability + Pit_Stop + Overtaking + Defending + Race_start + tyre_management
 
 
+class Driver:
+    def __init__(self, overtaking, defending, qualifying, race_start, tyre_management, name):
+        self.overtaking = overtaking
+        self.defending = defending
+        self.qualifying = qualifying
+        self.race_start = race_start
+        self.tyre_management = tyre_management
+        self.name = name
+        self.teamscore = overtaking + defending + qualifying + race_start + tyre_management
+
+
 class Setup:
     def __init__(self, Brake, Engine, Suspension, Fwing, Bwing, Gbox, n):
         self.Brake = Brake
@@ -90,3 +101,19 @@ class Setup:
         self.Gbox = Gbox
         self.n = n
         self.teamscore = Brake.teamscore + Engine.teamscore + Suspension.teamscore + Fwing.teamscore + Bwing.teamscore + Gbox.teamscore
+
+
+# Classe criada para realização da tarefa 4
+
+class Setup_T4:
+    def __init__(self, Brake, Engine, Suspension, Fwing, Bwing, Gbox, Driver, Bottle, n):
+        self.Brake = Brake
+        self.Engine = Engine
+        self.Suspension = Suspension
+        self.Fwing = Fwing
+        self.Bwing = Bwing
+        self.Gbox = Gbox
+        self.Driver = Driver
+        self.Bottle = Bottle
+        self.n = n
+        self.teamscore = Brake.teamscore + Engine.teamscore + Suspension.teamscore + Fwing.teamscore + Bwing.teamscore + Gbox.teamscore + Driver.teamscore + Bottle.teamscore

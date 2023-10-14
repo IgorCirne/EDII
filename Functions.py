@@ -22,7 +22,7 @@ def Create_Setups(setups=[], t=0):
 # Essa função recebe duas arrays: Uma com todos os setups e uma vazia, ele coloca os top 50 baseados em teamscore na array vazia
 def Top_10(setups=[], filtered_setups=[]):
     setups.sort(key=lambda temp: temp.teamscore, reverse=True)
-    for i in range(50):
+    for i in range(10):
         filtered_setups.append(setups[i])
 
 

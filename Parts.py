@@ -169,6 +169,21 @@ Rena = Classes.Bottle(0, 10, 0, 0, 20, 0, 20, 0, 0, 'Rena')
 
 Bottles = [Tsar, Frost, Tulip, Dragon, Kawaii, Pretzel, Vice, Schooner, Djinn, Oud, Eternal_Flame, Eagle, Iron_Force,
            Lumberjack, Cranberry, Butterfly, Tune_in, Self_Control, Warrior, Ballast, Instinct, Downforce, Hex,
-           Eggception, Rooster
-    , Cuppa, Street_Shark, Herald, Prince, Unstoppable, Dead_Fast, Gladiator, Taurus, Merlion, Samba, Caveira, Fogos,
+           Eggception, Rooster, Cuppa, Street_Shark, Herald, Prince, Unstoppable, Dead_Fast, Gladiator, Taurus, Merlion, Samba, Caveira, Fogos,
            Movember, Palmeira, Nazal, Aderencia, Arco_Iris, Eclipse, Rena]
+
+
+# Aqui segue a lista dos motoristas
+
+Verstappen = Classes.Driver(97, 86, 99, 89, 94, 'Verstappen')
+Leclerc = Classes.Driver(93, 99, 97, 87, 89, 'Leclerc')
+Alonso = Classes.Driver(99, 92, 89, 97, 88, 'Alonso')
+Hamilton = Classes.Driver(81, 86, 89, 94, 90, 'Hamilton')
+Norris = Classes.Driver(99, 95, 99, 99, 99, 'Norris')
+Russell = Classes.Driver(95, 90, 91, 83, 86, 'Russell')
+Perez = Classes.Driver(85, 96, 89, 91, 84, 'Perez')
+Sainz = Classes.Driver(84, 85, 95, 90, 91, 'Sainz')
+Stroll = Classes.Driver(92, 83, 87, 94, 89, 'Stroll')
+Gasly = Classes.Driver(88, 93, 83, 85, 96, 'Gasly')
+
+Drivers = [Verstappen, Leclerc, Alonso, Hamilton, Norris, Russell, Perez, Sainz, Stroll, Gasly]
