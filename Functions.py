@@ -2,9 +2,7 @@ import Classes
 import Parts
 
 
-
-
-# Função que cria todos os setups possíveis baseados nas 6 cartas para um carro
+# Função que cria todos os setups possíveis baseados nas cartas para um carro
 def Create_Setups(setups=[], t=0):
     for a in range(8):
         for b in range(8):
@@ -26,58 +24,14 @@ def Top_10(setups=[], filtered_setups=[]):
         filtered_setups.append(setups[i])
 
 
-# Essa função recebe um grafo G e coloca nodes com cada parte possível
-def add_nodes_from_parts(G):
-    for i in range(len(Parts.Brakes)):
-        G.add_node(Parts.Brakes[i].name, part=True)
-    for i in range(len(Parts.Gboxes)):
-        G.add_node(Parts.Gboxes[i].name, part=True)
-    for i in range(len(Parts.Fwings)):
-        G.add_node(Parts.Fwings[i].name, part=True)
-    for i in range(len(Parts.Bwings)):
-        G.add_node(Parts.Bwings[i].name, part=True)
-    for i in range(len(Parts.Engines)):
-        G.add_node(Parts.Engines[i].name, part=True)
-    for i in range(len(Parts.Suspensions)):
-        G.add_node(Parts.Suspensions[i].name, part=True)
-
-# Função que cria os nodes do grafo baseado no nome dos setups
-def add_nodes_from_setups(G, setups_filtered):
-    for i in range(len(setups_filtered)):
-        G.add_node(setups_filtered[i].n, part=False)
-
-# Função que cria as arestas do grafo
-def add_edges(G, setups_filtered=[]):
-    for i in range(len(Parts.Brakes)):
-        for j in range(len(setups_filtered)):
-            if setups_filtered[j].Brake.name == Parts.Brakes[i].name:
-                G.add_edge(Parts.Brakes[i].name, setups_filtered[j].n)
-
-    for i in range(len(Parts.Gboxes)):
-        for j in range(len(setups_filtered)):
-            if setups_filtered[j].Gbox.name == Parts.Gboxes[i].name:
-                G.add_edge(Parts.Gboxes[i].name, setups_filtered[j].n)
-
-    for i in range(len(Parts.Suspensions)):
-        for j in range(len(setups_filtered)):
-            if setups_filtered[j].Suspension.name == Parts.Suspensions[i].name:
-                G.add_edge(Parts.Suspensions[i].name, setups_filtered[j].n)
-
-    for i in range(len(Parts.Bwings)):
-        for j in range(len(setups_filtered)):
-            if setups_filtered[j].Bwing.name == Parts.Bwings[i].name:
-                G.add_edge(Parts.Bwings[i].name, setups_filtered[j].n)
-
-    for i in range(len(Parts.Fwings)):
-        for j in range(len(setups_filtered)):
-            if setups_filtered[j].Fwing.name == Parts.Fwings[i].name:
-                G.add_edge(Parts.Fwings[i].name, setups_filtered[j].n)
-
-    for i in range(len(Parts.Engines)):
-        for j in range(len(setups_filtered)):
-            if setups_filtered[j].Engine.name == Parts.Engines[i].name:
-                G.add_edge(Parts.Engines[i].name, setups_filtered[j].n)
-
+def add_edges_setups(G, parts, setups_filtered):
+    for setup in setups_filtered:
+        for part in parts:
+            if (
+                    part.name in [setup.Brake.name, setup.Gbox.name, setup.Suspension.name, setup.Fwing.name,
+                                  setup.Bwing.name, setup.Engine.name]
+            ):
+                G.add_edge(part, setup)
 
 
 def add_edges_bottles(G, nodes_A, bottles, node_index=0):
