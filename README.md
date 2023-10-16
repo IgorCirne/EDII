@@ -21,7 +21,7 @@ O código pode ser encontrado no arquivo ProjetoF1.py
 A segunda tarefa consiste na criação de um digrafo contendo todas as peças possíveis e os setups filtrados como nós, devem-se ter arestas apontando das peças para os setups que elas fazem parte, além disso, também deve ser feito gráfico de densidade de probabilidade de acordo com o out degree dos nós
 
 Para a realização da tarefa, foram primeiramente crtiados os nodes num grafo G que receberam os melhores 10 setups, e as todas as peças, isso foi feito com as funções add_nodes_from_setups() e add_nodes_from_parts(), encontradas no arquivo Functions.py.
-Após criar os nodes, foram adicionada as arestas usando a função add_edges(), que também está no arquivo Functions.py.
+Após criar os nodes, foram adicionada as arestas usando a função add_edges_setups(), que também está no arquivo Functions.py.
 Com isso, muda-se as cores dos nós para facilitar a identificação dos mesmos e desenha-se o grafo coim layout circular, para facilitar sua visualização.
 em relação ao gráfico de densidade de probabilidade, o mesmo pode ser encontrado no arquivo KDE plot.py.
 O código pode ser encontrado no arquivo Tarefa2.py
