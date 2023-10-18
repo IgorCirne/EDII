@@ -1,6 +1,7 @@
 # Projeto 1 Unidade 2
-Aluno: Igor Cirne Borges de Oliveira;
-Matrícula: 20230001623;
+Aluno: Igor Cirne Borges de Oliveira
+
+Matrícula: 20230001623
 
 Este repositório contém os códigos feitos para a realização do primeiro projeto da unidade 2
 Tal atividade é um projeto relacionado com grafos e visa como objetivo testar os conhecimentos adquiridos durante o mesmo para criar e gerenciar grafos usando
