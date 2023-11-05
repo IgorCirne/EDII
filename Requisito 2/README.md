@@ -1,6 +1,6 @@
 # Análise dos gráficos das networks
 
- Para este trabalho, foram utilizadas cinco redes para mostrar o funcionamento de conceitos sobre assortatividade, small worlds e homofilia. 
+ Para este trabalho, foram utilizadas cinco redes para mostrar o funcionamento de conceitos sobre assortatividade, small worlds e homofilia. As redes escolhidas possuem características bastante variadas, contendo redes sociais (Twitch e Wiki-Vote), uma rede de envio de emails, uma rede de estradas e uma de co-autoria em artigos e pesquisas. Três dos gráficos gerados possuem uma linha de assortatividade subindo, enquanto dois apresentam linhas descendentes. A seguir, uma análise dos dados fornecidos pelas redes contidas no SNAP.
 
  
   A rede do General Relativity and Quantum Cosmology collaboration trata-se de um e-print do [arXiv](https://arxiv.org) que cobre autores e artigos ligados a relatividade geral e cosmologia quântica. O parâmetro utilizado para a conexão realizada é se um autor X fez um artigo com autor Y, dessa forma, os nós X e Y serão conectados. Como podemos ver no gráfico gerado, existe uma linha positiva de assortatividade, indicando que autores que colaboram em artigos tendem a colaborar bastante em artigos entre si.
