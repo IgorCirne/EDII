@@ -1,5 +1,5 @@
 # Algoritmo e Estruturas de Dados II - Small Worlds 
-Este repositório trata de Small Worlds, cujo propósito é estudar e analisar as semelhanças e proximidades entre duas entidades. Dentro de uma rede, podemos ter nós do mesmo tipo que interagem entre si, e chamamos isso de assortatividade.
+Este branch do repositório trata de Small Worlds, cujo propósito é estudar e analisar as semelhanças e proximidades entre duas entidades. Dentro de uma rede, podemos ter nós do mesmo tipo que interagem entre si, e chamamos isso de assortatividade.
 
 
 Foram escolhidas cinco redes como exemplo para demonstrar o funcionamento neste projeto. A primeira escolhida foi a rede de streamers brasileiros do twitch, existem várias networks dentro dessa, cada uma para uma língua, a escolhida foi a dos usuários brasileiros. A segunda rede é a de votos do Wikipedia, ela se baseia na votação para a administração do site. A terceira é a do email_eu_core, que é de uma rede de pesquisa anônima européia, contendo arestas entre pessoas que enviaram emails entre si. A quarta é a do Arxiv GR-QC, uma rede que é  um e-print e cobre colaborações e artigos na área de relatividade geral e cosmologia quântica. A quinta é um pouco diferente e trata-se da rede de estradas do estado do Texas e suas conexões.
