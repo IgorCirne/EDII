@@ -13,7 +13,7 @@ O repositório do requisito 2 contém os códigos para cada uma das redes, dentr
 **Discente: Igor Cirne Borges de Oliveira - 20230001623**
 
 
-**Link do vídeo:** [Projeto 2 - Small Worlds]()
+**Link do vídeo:** [Projeto 2 - Small Worlds](https://www.loom.com/share/2d97cf75186241a1b2d0392dae6f0a97?sid=2cb5dccd-2bbb-4a1a-be24-a7f036439128)
 
 
 
